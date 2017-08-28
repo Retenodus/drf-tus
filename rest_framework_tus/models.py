@@ -40,10 +40,17 @@ class AbstractUpload(models.Model):
         abstract = True
 
     def write_data(self, bytes, chunk_size):
+        """
+        Writes the data sent by the user to the temporary upload file. It's done chunk by chunk and if a write fails, only
+        the current chunk must be resent
+        :param bytes: binary data
+        :param chunk_size: size of the chunk
+        """
         write_bytes_to_file(self.temporary_file_path, self.upload_offset, bytes, makedirs=True)
 
-        self.upload_offset += chunk_size
-        self.save()
+        if Upload.objects.filter(pk=self.pk).exists():
+            self.upload_offset += len(bytes)
+            self.save()
 
     def delete(self, *args, **kwargs):
         if self.temporary_file_path and os.path.exists(self.temporary_file_path):

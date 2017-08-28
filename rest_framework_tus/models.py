@@ -48,9 +48,8 @@ class AbstractUpload(models.Model):
         """
         write_bytes_to_file(self.temporary_file_path, self.upload_offset, bytes, makedirs=True)
 
-        if Upload.objects.filter(pk=self.pk).exists():
-            self.upload_offset += len(bytes)
-            self.save()
+        self.upload_offset += len(bytes)
+        self.save()
 
     def delete(self, *args, **kwargs):
         if self.temporary_file_path and os.path.exists(self.temporary_file_path):

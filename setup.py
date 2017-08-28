@@ -51,7 +51,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Gregoire Leroy',
     author_email='gregoire.leroy@sewan.fr',
-    url='https://github.com/dirkmoors/sewan-drf-tus',
+    url='https://github.com/retenodus/sewan-drf-tus',
     packages=[
         'rest_framework_tus',
     ],

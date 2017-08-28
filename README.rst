@@ -84,6 +84,9 @@ Tools used in rendering this package:
 
 *  Cookiecutter_
 *  `cookiecutter-djangopackage`_
+* `drf-tus_`
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+.. _`drf-tus`: https://github.com/dirkmoors/drf-tus
+ 

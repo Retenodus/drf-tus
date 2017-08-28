@@ -45,13 +45,13 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='drf-tus',
+    name='sewan-drf-tus',
     version=version,
     description="""A Tus (tus.io) library for Django Rest Framework""",
     long_description=readme + '\n\n' + history,
-    author='Dirk Moors',
-    author_email='dirkmoors@gmail.com',
-    url='https://github.com/dirkmoors/drf-tus',
+    author='Gregoire Leroy',
+    author_email='gregoire.leroy@sewan.fr',
+    url='https://github.com/dirkmoors/sewan-drf-tus',
     packages=[
         'rest_framework_tus',
     ],
@@ -64,13 +64,14 @@ setup(
     ],
     license="MIT",
     zip_safe=False,
-    keywords='drf-tus',
+    keywords='sewan-drf-tus',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
+        'Framework :: Django :: 1.11',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',

@@ -10,4 +10,5 @@ Development Lead
 Contributors
 ------------
 
+* Pierre Chartier, Sewan <pierre.chartier@sewan.fr>
 * Gregoire Leroy, Sewan <gregoire.leroy@sewan.fr>
